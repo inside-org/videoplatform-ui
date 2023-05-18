@@ -5,6 +5,7 @@ import styles from 'Src/styles/Home.module.css'
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { addTest } from '../redux/store/slice/TestSlice';
+import Button from '@mui/material/Button';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,6 +23,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <Button variant="contained">Hello World</Button>
         <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
