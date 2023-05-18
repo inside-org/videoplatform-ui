@@ -2,10 +2,17 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from 'Src/styles/Home.module.css'
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { addTest } from '../redux/store/slice/TestSlice';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(addTest());
+  }, [dispatch])
   return (
     <>
       <Head>
