@@ -1,10 +1,26 @@
+import { useEffect } from "react"
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import VideoPlayer from 'Src/components/player'
 
+import { makeServer } from 'Src/mirage';
+
+const environment = process.env.NODE_ENV;
+
+if (environment !== "production") {
+  makeServer({ environment });
+}
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Root() {
+  useEffect(() => {
+    fetch("/api/videos")
+      .then((res) => res.json())
+      .then((json) => {
+        console.log(json.videos);
+      })
+  }, [])
   return (
     <>
       <Head>
