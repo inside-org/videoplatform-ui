@@ -1,9 +1,11 @@
+import Сhannel from 'Src/components/pages/channel';
 import { useRouter } from 'next/router';
 
-const Сhannel = () => {
+const СhannelPage = () => {
   const router = useRouter();
+  console.log(router.query.id);
 
-  return <p>Сhannel: {router.query.id}</p>;
+  return <Сhannel />
 }
 
-export default Сhannel;
+export default СhannelPage;

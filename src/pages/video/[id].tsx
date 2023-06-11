@@ -1,9 +1,13 @@
 import { useRouter } from 'next/router';
+import Video from 'Src/components/pages/video';
 
-const Video = () => {
+const VideoPage = () => {
     const router = useRouter();
+    console.log(router.query.id);
 
-    return <p>Video: {router.query.id}</p>;
+    return (
+        <Video />
+    );
 }
 
-export default Video;
+export default VideoPage;
