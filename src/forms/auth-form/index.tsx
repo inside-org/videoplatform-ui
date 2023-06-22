@@ -19,7 +19,7 @@ const AuthForm = () => {
 
     return (
         <Box component="form" className={styles.auth}>
-            <FormControl className={styles.auth-item}>
+            <FormControl>
                 <TextField
                     value={ login }
                     onChange={ handleChangeLogin }

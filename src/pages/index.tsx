@@ -1,7 +1,8 @@
 import { useEffect } from "react"
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
-import VideoPlayer from 'Src/components/player'
+import Layout from "Src/components/layout";
+import VideoPlayer from 'Src/components/video-player'
 
 import { makeServer } from 'Src/mirage';
 
@@ -30,8 +31,10 @@ export default function Root() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        Пустой шаблон c плеером
-        <VideoPlayer />
+        <Layout>
+          Пустой шаблон c плеером
+          <VideoPlayer />
+        </Layout>
       </main>
     </>
   )
