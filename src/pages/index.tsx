@@ -1,8 +1,11 @@
 import { useEffect } from "react"
 import Head from 'next/head'
+import Image from 'next/image'
 // import { Inter } from 'next/font/google'
 // import Layout from "Src/components/layout";
 // import VideoPlayer from 'Src/components/video-player';
+
+import Logo from '../../public/insider-video.svg'
 
 import { makeServer } from 'Src/mirage';
 
@@ -35,6 +38,14 @@ export default function Root() {
           Пустой шаблон c плеером
           <VideoPlayer />
         </Layout> */}
+        <Image
+          src={Logo}
+          alt="insider.video"
+          sizes="100vw"
+          style={{
+            objectFit: 'cover',
+          }}
+        />
       </main>
     </>
   )
