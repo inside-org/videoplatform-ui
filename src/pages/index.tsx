@@ -1,8 +1,8 @@
 import { useEffect } from "react"
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
-import Layout from "Src/components/layout";
-import VideoPlayer from 'Src/components/video-player'
+// import { Inter } from 'next/font/google'
+// import Layout from "Src/components/layout";
+// import VideoPlayer from 'Src/components/video-player';
 
 import { makeServer } from 'Src/mirage';
 
@@ -12,16 +12,16 @@ if (environment !== "production") {
   makeServer({ environment });
 }
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
 
 export default function Root() {
-  useEffect(() => {
-    fetch("/api/videos")
-      .then((res) => res.json())
-      .then((json) => {
-        console.log(json.videos);
-      })
-  }, [])
+  // useEffect(() => {
+  //   fetch("/api/videos")
+  //     .then((res) => res.json())
+  //     .then((json) => {
+  //       console.log(json.videos);
+  //     })
+  // }, [])
   return (
     <>
       <Head>
@@ -31,10 +31,10 @@ export default function Root() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Layout>
+        {/* <Layout>
           Пустой шаблон c плеером
           <VideoPlayer />
-        </Layout>
+        </Layout> */}
       </main>
     </>
   )
